@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+.text-primary {
+  color: #7c9494;
+}
+.blog {
+  white-space: pre-line;
+}
