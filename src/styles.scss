@@ -10,6 +10,44 @@ img {
 .text-primary {
   color: #7c9494;
 }
+.text-center {
+  text-align: center;
+}
+.p-x-2em {
+  padding: 0 2em;
+}
+section {
+  background-color: #f9f9f9;
+  h1:first-child {
+    color: red;
+    text-align: center;
+    font-size: 3em;
+  }
+}
+.bio-img {
+  border-radius: 50%;
+  border: 5px solid #7c9494;
+}
+.link-img {
+  text-decoration: none;
+  img {
+    height: 200px;
+    transition: all 0.3s ease-out;
+  }
+  img:hover {
+    transform: scale(0.9);
+  }
+  h5 {
+    text-align: center;
+    color: #7c9494;
+    font-size: 1em;
+  }
+}
 .blog {
   white-space: pre-line;
+  .post {
+    background-color: #f9f9f9;
+    border: 1px solid grey;
+    margin-bottom: 2em;
+  }
 }
