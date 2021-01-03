@@ -1,11 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-  font-family: 'Roboto', sans-serif;
-}
-img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
+* {
+  text-align: center;
+  line-height: 1.5em;
 }
 .text-primary {
   color: #7c9494;
@@ -13,20 +9,91 @@ img {
 .text-center {
   text-align: center;
 }
-.p-x-2em {
-  padding: 0 2em;
+.p-0 {
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: #7c9494;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+img {
+  display: block;
+  margin: 0;
+  padding: 1rem 0;
 }
 section {
-  background-color: #f9f9f9;
+  margin: 2em 0;
+  padding: 2rem;
+  // background-color: #fbfbfb;
   h1:first-child {
-    color: red;
-    text-align: center;
-    font-size: 3em;
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  // padding-top: 150px;
+}
+a {
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
+  li {
+    margin: 0;
+  }
+}
+img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  // position: fixed;
+  // height: 150px;
+  width: 100%;
+  // top: 0;
+  // left: 0;
+  background-color: #7c9494;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: bold;
+  .row {
+    height: 100%;
+  }
+  .logo {
+    // max-width: calc(150px - 2rem);
+    max-width: 150px;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    a {
+      font-size: clamp(1rem, 1.2vw, 2rem);
+      padding: 1rem;
+    }
   }
 }
 .bio-img {
+  padding: 0;
   border-radius: 50%;
-  border: 5px solid #7c9494;
+  border: 2px solid #7c9494;
 }
 .link-img {
   text-decoration: none;
@@ -38,16 +105,29 @@ section {
     transform: scale(0.9);
   }
   h5 {
-    text-align: center;
     color: #7c9494;
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 .blog {
   white-space: pre-line;
-  .post {
-    background-color: #f9f9f9;
-    border: 1px solid grey;
-    margin-bottom: 2em;
+}
+.boxWrapper {
+  padding: 1.5rem;
+}
+.box {
+  height: 100%;
+  padding: 0 2rem;
+  background-color: #7c9494;
+  // background-image: linear-gradient(to bottom right, #7c9494, #969380);
+  box-shadow: 3px 3px 1rem #7c9494;
+  border-radius: 1rem;
+  color: white;
+  h2 {
+    color: white;
+  }
+  p,
+  ul li {
+    text-align: left;
   }
 }

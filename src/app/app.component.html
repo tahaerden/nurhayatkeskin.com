@@ -1,61 +1,113 @@
-<section>
-  <h1>INTRO</h1>
+<header>
   <div class="row">
-    <div class="col-xs-12 col-sm-6">
-      <img src="assets/img/logo.jpg" alt="Nurhayat Keskin logo" />
+    <div class="col-xs-12 col-sm-4">
+      <img class="logo" src="assets/img/logo.jpg" alt="Nurhayat Keskin logo" />
     </div>
-    <div class="col-xs-12 col-sm-6">
-      <h2>Hoşgeldiniz</h2>
-    </div>
+    <nav class="col-xs-12 col-sm-8">
+      <a (click)="scrollTo(services)">ÇALIŞMALAR</a>
+      <a (click)="scrollTo(bio)">BİYOGRAFİ</a>
+      <a (click)="scrollTo(blog)" [hidden]="!posts.length">BLOG</a>
+      <a (click)="scrollTo(contact)">İLETİŞİM</a>
+    </nav>
   </div>
-</section>
+</header>
 
-<section>
+<section #services>
   <h1>ÇALIŞMALAR</h1>
   <div class="row">
-    <div class="col-sm-6">
-      <h2>Çocuk, ergen, aile ve evlilik terapisti.</h2>
-      <p>
-        Çocuklarda ve ergenlerde görülen davranış problemlerleri; Okul başarısızlığı, dikkat
-        eksikliği, hiperaktivite bozukluğu, korku, fobi, obsesyon, depresyon, korku, fobi, Ergen de
-        kimlik karmaşası, Ebeveyn çatışması, okul problemi.
-      </p>
-      <p>
-        Boşanma, ilişki sorunları, boşanma öncesi ve sonrası çocuk a yaklaşım nasıl olmalı, nasıl
-        bir yol izlenmeli.
-      </p>
-      <h2>EMDR</h2>
-      EMDR göz hareketiyle duyarsızlaştırma ve yeniden işleme: Bir çok farklı terapi ekollerinden
-      öğeleri içeren,farklı tanı almış durumlara özel standartlaştırılmış protokolleri bulunan,
-      bütüncül bir terapi yöntemidir.
-      <h2>Gelişimsel testler</h2>
-      <p>AGTE(Ankara gelişim tarama envanteri), Danver ll , Wisc-R , Projektif testler</p>
-      <h2>Oyun terapisti</h2>
-      <p>
-        Oyun terapisi, tedirgin çocukların içe atılmış isteklerini, bilinç dışı korku ve yılgılarını
-        öğrenmek ve davranış bozukluklarını gidermek için başvurulan bir tekniktir. Çocuğun
-        problemlerini anlamak, onun duygularını ve tutumlarını keşfetmek ve çocuğu bunlarla
-        yüzleştirerek çözüm getirmesini sağlamak için geliştirilmiş bir tekniktir.
-      </p>
-      <h2>Online danışmanlık ve terapi</h2>
+    <div class="boxWrapper col-xs-12 col-xs-12 col-md-4">
+      <div class="box">
+        <h2>Çocuk, ergen, aile ve evlilik terapisti.</h2>
+        <p>
+          Çocuklarda ve ergenlerde görülen davranış problemlerleri; Okul başarısızlığı, dikkat
+          eksikliği, hiperaktivite bozukluğu, korku, fobi, obsesyon, depresyon, korku, fobi, Ergen
+          de kimlik karmaşası, Ebeveyn çatışması, okul problemi.
+        </p>
+        <p>
+          Boşanma, ilişki sorunları, boşanma öncesi ve sonrası çocuk a yaklaşım nasıl olmalı, nasıl
+          bir yol izlenmeli.
+        </p>
+      </div>
     </div>
-    <div class="col-sm-6">
-      <img src="assets/img/icons/undraw_quality_time_wiyl.svg" alt="Çocuk terapisti" />
+    <div class="boxWrapper col-xs-12 col-xs-12 col-md-4">
+      <div class="box">
+        <h2>EMDR</h2>
+        EMDR göz hareketiyle duyarsızlaştırma ve yeniden işleme: Bir çok farklı terapi ekollerinden
+        öğeleri içeren,farklı tanı almış durumlara özel standartlaştırılmış protokolleri bulunan,
+        bütüncül bir terapi yöntemidir.
+      </div>
+    </div>
+    <div class="boxWrapper col-xs-12 col-xs-12 col-md-4">
+      <div class="box">
+        <h2>Gelişimsel testler</h2>
+        <ul>
+          <li>AGTE(Ankara gelişim tarama envanteri)</li>
+          <li>Danver ll</li>
+          <li>Wisc-R</li>
+          <li>Projektif testler</li>
+        </ul>
+      </div>
+    </div>
+    <div class="boxWrapper col-xs-12 col-xs-12 col-md-4">
+      <div class="box">
+        <h2>Oyun terapisti</h2>
+        <p>
+          Oyun terapisi, tedirgin çocukların içe atılmış isteklerini, bilinç dışı korku ve
+          yılgılarını öğrenmek ve davranış bozukluklarını gidermek için başvurulan bir tekniktir.
+        </p>
+        <p>
+          Çocuğun problemlerini anlamak, onun duygularını ve tutumlarını keşfetmek ve çocuğu
+          bunlarla yüzleştirerek çözüm getirmesini sağlamak için geliştirilmiş bir tekniktir.
+        </p>
+      </div>
+    </div>
+    <div class="boxWrapper col-xs-12 col-xs-12 col-md-4">
+      <div class="box">
+        <h2>Online danışmanlık ve terapi</h2>
+      </div>
+    </div>
+    <div class="boxWrapper col-xs-12 col-xs-12 col-md-4">
+      <div class="box">
+        <img src="assets/img/icons/undraw_quality_time_wiyl.svg" alt="Çocuk terapisti" />
+      </div>
     </div>
   </div>
 </section>
 
-<section>
+<section #bio>
   <h1>BİYOGRAFİ</h1>
-  <div class="row text-center">
-    <div class="col-xs-12">
+  <div class="row">
+    <div class="col-xs-12 col-xs-12 col-md-4">
+      <p>
+        Hacettepe Üniversitesi Psikoloji bölümünden mezun olduktan sonra SSK Ankara Çocuk Hastanesi
+        Bebek Servisi, SSK Ankara Çocuk Psikiyatri Kliniği, SSK Ankara Fizik Tedavi ve
+        Rehabilitasyon Kliniği ve SSYB Dışkapı Eğitim ve Araştırma Hastanesi Çocuk Psikiyatri
+        Kliniğinde görev yaptı.
+      </p>
+      <p>
+        ODTÜ Klinik Psikoloji bölümünde Aile ve Evlilik Terapisi I ve II, 2006 yılında Danver II
+        Gelişim Testi ve Psikoterapide Hipnodrama alanlarında eğitim almıştır.
+      </p>
+      <p>
+        İstanbul Davranış Bilimleri Enstitüsü EMDR eğitiminin ardından uzun yıllar Madalyon
+        Psikiyatri merkezinde çocuk, ergen ve aile terapisi konularında uzman danışman olarak görev
+        yapmıştır.
+      </p>
+      <p>
+        Bir yıl süresince Çocuk Nörolojisi Derneği’nde eğitimler aldıktan sonra yine bu dernekte
+        uzman psikolog olarak hasta değerlendirmelerine katkıda bulunmuştur.
+      </p>
+      <p>
+        Bu görevlerinin yanı sıra 1998 – 2016 yılları arasında Alican Eğitim Kurumları’nda kurucu
+        psikolog olarak görev yapmıştır. 2016 yılından itibaren Katarsis Psikolojik Danışmanlık
+        Merkezinde çalışmalarına devam etmektedir.
+      </p>
+    </div>
+    <div class="col-xs-12 col-xs-12 col-md-4">
       <img class="bio-img" src="assets/img/bio.jpg" alt="Nurhayat Keskin" />
       <h2>Psikolog Nurhayat Keskin</h2>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-6">
-      <p>Çocuklar üzerine yaptığı klinik çalışmalarda uyguladığı testler;</p>
+    <div class="col-xs-12 col-xs-12 col-md-4">
       <h2>Zeka ve Gelişim Testleri</h2>
       <ul>
         <li>WISC-R (Wechsler Çocuklar için Zeka Ölçeği)</li>
@@ -83,57 +135,37 @@
         belgesi alınmıştır)
       </p>
     </div>
-    <div class="col-xs-12 col-sm-6">
-      <p>
-        Hacettepe Üniversitesi Psikoloji bölümünden mezun olduktan sonra SSK Ankara Çocuk Hastanesi
-        Bebek Servisi, SSK Ankara Çocuk Psikiyatri Kliniği, SSK Ankara Fizik Tedavi ve
-        Rehabilitasyon Kliniği ve SSYB Dışkapı Eğitim ve Araştırma Hastanesi Çocuk Psikiyatri
-        Kliniğinde görev yaptı.
-      </p>
-      <p>
-        ODTÜ Klinik Psikoloji bölümünde Aile ve Evlilik Terapisi I ve II, 2006 yılında Danver II
-        Gelişim Testi ve Psikoterapide Hipnodrama alanlarında eğitim almıştır.
-      </p>
-      <p>
-        İstanbul Davranış Bilimleri Enstitüsü EMDR eğitiminin ardından uzun yıllar Madalyon
-        Psikiyatri merkezinde çocuk, ergen ve aile terapisi konularında uzman danışman olarak görev
-        yapmıştır.
-      </p>
-      <p>
-        Bir yıl süresince Çocuk Nörolojisi Derneği’nde eğitimler aldıktan sonra yine bu dernekte
-        uzman psikolog olarak hasta değerlendirmelerine katkıda bulunmuştur.
-      </p>
-      <p>
-        Bu görevlerinin yanı sıra 1998 – 2016 yılları arasında Alican Eğitim Kurumları’nda kurucu
-        psikolog olarak görev yapmıştır. 2016 yılından itibaren Katarsis Psikolojik Danışmanlık
-        Merkezinde çalışmalarına devam etmektedir.
-      </p>
-    </div>
   </div>
 </section>
 
-<section class="blog" *ngIf="posts.length">
+<section #blog class="blog" [hidden]="!posts.length">
   <h1>BLOG</h1>
-  <img src="assets/img/icons/undraw_blogging_vpvv.svg" alt="Blog" />
-  <div class="row p-x-2em">
-    <div class="post col-xs-12 col-sm-4" *ngFor="let post of posts; let index = index">
-      <h2>
-        {{ post.header }}
-      </h2>
-      <p>
-        {{ post.content }}
-      </p>
+  <div class="row">
+    <div class="boxWrapper col-xs-12 col-md-4">
+      <img src="assets/img/icons/undraw_blogging_vpvv.svg" alt="Blog" />
+    </div>
+    <div class="boxWrapper col-xs-12 col-md-4" *ngFor="let post of posts; let index = index">
+      <div class="box">
+        <h2>
+          {{ post.header }}
+        </h2>
+        <p>
+          {{ post.content }}
+        </p>
+      </div>
     </div>
   </div>
 </section>
 
-<section>
+<section #contact>
   <h1>İLETİŞİM</h1>
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-sm-6">
       <address>
         <div>ADRES BİLGİLERİ BURADA</div>
       </address>
+    </div>
+    <div class="col-xs-12 col-sm-6">
       <h2>Görüşme Alternatifleri</h2>
       <ul>
         <li>Telefonla terapi</li>
@@ -142,17 +174,19 @@
       </ul>
       <p>Görüşmeler 50 dk sürmektedir. İlk tanışma ve tanı seansı 15dk ve ücretsizdir.</p>
     </div>
+  </div>
+  <div class="row">
     <div class="col-xs-12">
       <div class="row">
-        <a class="col-sm-4 link-img" href="mailto:info@nurhayatkeskin.com">
+        <a class="col-xs-12 col-sm-4 link-img" href="mailto:info@nurhayatkeskin.com">
           <img src="assets/img/icons/undraw_envelope_n8lc.svg" alt="E-posta" />
           <h5>E-posta Gönder</h5>
         </a>
-        <a class="col-sm-4 link-img" href="tel:+905323347327">
+        <a class="col-xs-12 col-sm-4 link-img" href="tel:+905323347327">
           <img src="assets/img/icons/undraw_phone_call_grmk.svg" alt="Telefon" />
           <h5>Telefon Et</h5>
         </a>
-        <a class="col-sm-4 link-img" href="https://www.instagram.com/nurhayat_keskin_d/">
+        <a class="col-xs-12 col-sm-4 link-img" href="https://www.instagram.com/nurhayat_keskin_d/">
           <img src="assets/img/icons/undraw_Social_life_re_x7t5.svg" alt="Instagram" />
           <h5>Takip Et</h5>
         </a>

@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.posts = [];
     for (let i = 1; i < 10; i++) {
-      this.http.get(`assets/blog/blog${i}.txt`, { responseType: 'text' }).subscribe(
+      this.http.get(`assets/blog/${i}.txt`, { responseType: 'text' }).subscribe(
         (data) => {
           const headerPos = data.indexOf('\r\n');
           const header = data.slice(0, headerPos);
@@ -30,5 +30,8 @@ export class AppComponent implements OnInit {
         (error) => of(false)
       );
     }
+  }
+  scrollTo($element: any): void {
+    $element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
   }
 }
